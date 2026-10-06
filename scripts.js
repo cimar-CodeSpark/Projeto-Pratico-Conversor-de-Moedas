@@ -60,12 +60,12 @@ function convertValues() {
     // --- AJUSTE: Limpa a formatação visual para conseguir converter em número puro ---
     // Remove pontos de milhar e troca a vírgula decimal por ponto
     let rawValue = inputCurrency.value.replace(/\./g, "").replace(",", ".");
-    const inputCorrencyValue = parseFloat(rawValue);
+    const inputCurrencyValue = parseFloat(rawValue);
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert");
     const currencyValueConverted = document.querySelector(".currency-value-converted");
 
 
-    if (isNaN(inputCorrencyValue)) {
+    if (isNaN(inputCurrencyValue)) {
         alert("Digite um valor válido!");
         return;
     }
@@ -82,7 +82,7 @@ function convertValues() {
     }
 
     // Fórmula: valor * (taxaDestino / taxaOrigem)
-    const convertido = inputCorrencyValue * (taxaDestino / taxaOrigem);
+    const convertido = inputCurrencyValue * (taxaDestino / taxaOrigem);
 
     // Exibe valores formatados
     currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
@@ -93,12 +93,12 @@ function convertValues() {
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
         style: "currency",
         currency: origem.toUpperCase()
-    }).format(inputCorrencyValue);
+    }).format(inputCurrencyValue);
 }
 
 // Atualiza nomes e imagens das moedas
 function changeCurrency() {
-    atualizarRates();
+    //atualizarRates();
     const currencyNameConvert = document.querySelector("#currency-name-convert");
     const currencyName = document.querySelector("#currency-name-converted");
     const currencyLogoConvert = document.querySelector(".currency-logo-convert");
@@ -138,12 +138,12 @@ function changeCurrency() {
         currencyLogoConverted.src = "./assets/Real.png";
     }
 
-    convertValues();
+    //convertValues();
 }
 
 // Eventos
-currencySelectToConvert.addEventListener("change", changeCurrency);
-currencySelect.addEventListener("change", changeCurrency);
+//currencySelectToConvert.addEventListener("change", changeCurrency);
+//currencySelect.addEventListener("change", changeCurrency);
 convertButton.addEventListener("click", convertValues);
 inputCurrency.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {

@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    /*retira a borda do input*/
+}
+
+body {
+    background-color: #ffffff;
+    background-image: url(./assets/ConversorMoedas.png);
+    /* Centraliza a imagem na tela */
+    background-position: center;
+    /* Evita que a imagem fique se duplicando (lado a lado) */
+    background-repeat: no-repeat;
+    /* Redimensiona a imagem proporcionalmente para cobrir todo o espaço */
+    background-size: cover;
+    /* Opcional: mantém o fundo fixo ao rolar a página */
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container-principal {
+    background-color: #ffffffb1;
+    border: 1px solid;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.currency-select-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 24px;
+}
+
+.currency-select-label {
+    color: #0016a5;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 10px;
+}
+
+.label-text {
+    color: #0016a5;
+    font-size: 15px;
+    font-weight: 600;
+    align-self: self-start;
+}
+
+.currency-select-to-convert,
+.currency-select {
+    background: #FFFFFF;
+    border: 1px solid;
+    border-radius: 4px;
+    height: 48px;
+    width: 100%;
+    margin-bottom: 24px;
+    /*Seta de escolha*/
+    appearance: none;
+    padding: 0 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #555555;
+    cursor: pointer;
+}
+
+.currency-value-container {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    margin-bottom: 24px;
+}
+
+.currency-value-label {
+    color: #0016a5;
+    font-size: 14px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 24px;
+}
+
+.label-text-value {
+    color: #0016a5;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+input {
+    background: #FFFFFF;
+    border: 1px solid;
+    border-radius: 4px;
+    height: 48px;
+    width: 100%;
+    appearance: none;
+    /*Seta de escolha*/
+    padding: 0 10px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #555555;
+    cursor: pointer;
+}
+
+/* Remove as setinhas em navegadores baseados em Webkit (Chrome, Safari, Edge, Opera) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove as setinhas no Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+button {
+    background: #2b32f9;
+    border-radius: 5px;
+    width: 30%;
+    border: none;
+    height: 48px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 0.6;
+}
+
+.currency-converted-container {
+    background-color: #ffffffc8;
+    border: 1px solid;
+    border-radius: 20px;
+    width: 80%;
+    margin: 10px 0px 24px 0px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.arrow-img {
+    margin: 15px 0;
+}
+
+#img-arrow {
+    width: 70px;
+    height: 50px;
+    margin: 0px 15px;
+}
+
+.currency-box {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.currency-logo-convert,
+.currency-logo-converted {
+    width: 64px;
+    height: 64px;
+}
+
+.currency {
+    color: #777777;
+    font-size: 14px;
+}
+
+.currency-value-to-convert,
+.currency-value-converted {
+    color: #555555;
+    font-weight: 700;
+    font-size: 100%;
+}
+
+
+
+/* Revisar - Responsividade para Celulares */
+@media (max-width: 768px) {
+    .container-principal {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    main {
+        padding: 10px 10px;
+    }
+
+    .Logo {
+        width: 200px;
+    }
+
+    /*     .conversor-card {
+        padding: 24px 20px;
+    } */
+}
