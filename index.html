@@ -14,36 +14,38 @@
 
 <body>
     <main class="container-principal">
-        <div class="currency-select-container">
-            <label class="currency-select-label">
-                <p class="label-text">Converter de</p>
-                <select class="currency-select-to-convert">
-                    <option value="BRL">Real Brasileiro</option>
-                    <option value="USD">Dolar Americano</option>
-                    <option value="EUR">Euro</option>
-                    <option value="GBP">Libra</option>
-                </select>
-            </label>
+        <h1 class="main-title">Conversor de Moedas</h1>
 
-            <label class="currency-select-label">
-                <p class="label-text">Converter para</p>
-                <select class="currency-select">
-                    <option value="USD">Dolar Americano</option>
+        <div class="currency-select-container">
+            <div class="currency-select-label">
+                <label for="select-from" class="label-text">Converter de</label>
+                <select id="select-from" class="currency-select-to-convert">
+                    <option value="BRL">Real Brasileiro</option>
+                    <option value="USD">Dólar Americano</option>
+                    <option value="EUR">Euro</option>
+                    <option value="GBP">Libra</option>
+                </select>
+            </div>
+
+            <div class="currency-select-label">
+                <label for="select-to" class="label-text">Converter para</label>
+                <select id="select-to" class="currency-select">
+                    <option value="USD">Dólar Americano</option>
                     <option value="EUR">Euro</option>
                     <option value="GBP">Libra</option>
                     <option value="BRL">Real Brasileiro</option>
                 </select>
-            </label>
+            </div>
         </div>
 
         <div class="currency-value-container">
-            <label class="currency-value-label">
-            <p class="label-text-value">Valor a ser convertido:</p>
-            <input maxlength="19" class="input-currency" placeholder="Digite o valor a ser convertido"></input>
-        </label>
-        <button class="btnConvert">Converter</button>
+            <div class="currency-value-label">
+                <label for="input-val" class="label-text-value">Valor a ser convertido:</label>
+                <input id="input-val" type="text" maxlength="19" class="input-currency" placeholder="R$ 0,00">
+            </div>
+            <button class="btnConvert">Converter</button>
         </div>
-        
+
         <section class="currency-converted-container">
             <div class="currency-box">
                 <img class="currency-logo-convert" src="./assets/Real.png" alt="Moeda-a-converter">
@@ -51,13 +53,13 @@
                 <p class="currency-value-to-convert">R$ 0,00</p>
             </div>
 
-            <div class="arrow-img">
-                <img id="img-arrow" src="./assets/Arrow4.png" alt="Seta">
+            <div class="container-img-arrow">
+                <img class="img-arrow" src="./assets/Arrow4.png" alt="Seta">
             </div>
 
             <div class="currency-box">
                 <img class="currency-logo-converted" src="./assets/Dolar.png" alt="Moeda-convertida">
-                <p class="currency" id="currency-name-converted">Dolar</p>
+                <p class="currency" id="currency-name-converted">Dólar Americano</p>
                 <p class="currency-value-converted">R$ 0,00</p>
             </div>
         </section>
